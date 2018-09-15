@@ -1,4 +1,3 @@
-alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS $SMTP_PORTS (msg:"FLEX  spam email attempt"; flow:to_server, established; content:""; nocase; metadata:service smtp; classtype:policy-violation;sid:1000001;)
 alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS $SMTP_PORTS (msg:"FLEX 03dec1.121407cet.118310@fd.hif.hu spam email attempt"; flow:to_server, established; content:"03dec1.121407cet.118310@fd.hif.hu"; nocase; metadata:service smtp; classtype:policy-violation;sid:1000002;)
 alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS $SMTP_PORTS (msg:"FLEX 1938844024@qq.com spam email attempt"; flow:to_server, established; content:"1938844024@qq.com"; nocase; metadata:service smtp; classtype:policy-violation;sid:1000003;)
 alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS $SMTP_PORTS (msg:"FLEX 1973524543@qq.com spam email attempt"; flow:to_server, established; content:"1973524543@qq.com"; nocase; metadata:service smtp; classtype:policy-violation;sid:1000004;)
